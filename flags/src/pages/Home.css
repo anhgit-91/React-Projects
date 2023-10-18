@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.filter-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+
+.country-card-wrapper {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 50px;
+}
