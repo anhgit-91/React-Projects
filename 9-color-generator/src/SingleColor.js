@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 function SingleColor({ rgb, weight, index, hexColor }) {
     const [alert, setAlert] = useState(false);
-    const bcg = rgb.join(",");
+    const bgc = rgb.join(",");
     const hexValue = `#${hexColor}`;
 
     useEffect(() => {
@@ -16,7 +16,7 @@ function SingleColor({ rgb, weight, index, hexColor }) {
         <article
             //change color text based on index
             className={`color ${index > 10 && "color-light"}`}
-            style={{ backgroundColor: `rgb(${bcg})` }}
+            style={{ backgroundColor: `rgb(${bgc})` }}
             onClick={() => {
                 setAlert(true);
                 navigator.clipboard.writeText(hexValue);
