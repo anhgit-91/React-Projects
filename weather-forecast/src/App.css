@@ -1,38 +1,131 @@
-.App {
-  text-align: center;
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        90deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(136, 136, 241, 1) 2%,
+        rgba(0, 212, 255, 1) 100%
+    );
+    color: white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1,
+h2,
+h3,
+p,
+input {
+    margin: 0;
+    padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.main h1 {
+    margin-bottom: 50px;
+    font-size: 52px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+.main .section {
+    text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main input,
+.main button {
+    display: inline;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+}
+
+.main input {
+    margin-right: 10px;
+    color: #8888f1;
+}
+
+.main button {
+    background-color: #5f5fe8;
+    color: white;
+}
+
+.main button:hover {
+    cursor: pointer;
+    background-color: #9b9bea;
+}
+
+.main .error-message {
+    margin-top: 50px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.main .weather-info {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main .weather-info .left {
+    margin-top: auto;
+}
+
+.main .weather-info .date {
+    font-size: 24px;
+}
+
+.main .weather-info .location {
+    font-size: 32px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.main .weather-info .temp {
+    font-size: 100px;
+    font-weight: bold;
+}
+
+.main .weather-info .mid {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: auto;
+    margin-bottom: 1rem;
+}
+
+.main .weather-info .mid p {
+    font-size: 32px;
+    text-transform: capitalize;
+}
+
+/* .main .weather-info img {
+    width: 200px;
+} */
+
+.main .weather-info .right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: auto;
+    margin-bottom: 1rem;
+}
+
+.main .weather-info .right span {
+    font-weight: bold;
+    color: #5f5fe8;
 }

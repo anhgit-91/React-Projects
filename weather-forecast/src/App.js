@@ -3,10 +3,10 @@ import "./App.css";
 
 function App() {
     return (
-        <div className="App">
-            <h1>5 Days Weather forecast</h1>
+        <main className="main">
+            <h1>Weather forecast</h1>
             <Weather />
-        </div>
+        </main>
     );
 }
 
