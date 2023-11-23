@@ -1,6 +1,6 @@
 import logo from "./logo.png";
 import hero from "./hero.png";
-import headset from "./headset.png";
+import vr from "./vr.png";
 import creator from "./creator.png";
 import topgame_1 from "./topgame_1.png";
 import topgame_2 from "./topgame_2.png";
@@ -20,11 +20,14 @@ import find from "./find.svg";
 import star from "./star.svg";
 import menu from "./menu.svg";
 import close from "./close.svg";
+import compass from "./compass.svg";
+import education from "./education.svg";
+import training from "./training.svg";
 
 export {
     logo,
     hero,
-    headset,
+    vr,
     creator,
     topgame_1,
     topgame_2,
@@ -43,4 +46,7 @@ export {
     star,
     menu,
     close,
+    compass,
+    education,
+    training,
 };

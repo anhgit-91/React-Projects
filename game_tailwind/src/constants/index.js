@@ -19,6 +19,33 @@ export const navLinks = [
     },
 ];
 
+export const features = [
+    {
+        id: "feature-1",
+        desc: "High-resolution OLED or LCD screens: Provide sharp and clear visuals.",
+    },
+    {
+        id: "feature-2",
+        desc: "Refresh rate: Higher refresh rates reduce motion sickness and provide.",
+    },
+    {
+        id: "feature-3",
+        desc: "Inside-out tracking: Built-in sensors (cameras or other sensors).",
+    },
+    {
+        id: "feature-4",
+        desc: "Eye tracking: Monitors the movement of the user's eyes, allowing for more.",
+    },
+    {
+        id: "feature-5",
+        desc: "High-resolution OLED or LCD screens: Provide sharp and clear visuals.",
+    },
+    {
+        id: "feature-6",
+        desc: "Refresh rate: Higher refresh rates reduce motion sickness and provide.",
+    },
+];
+
 export const footerLinks = [
     {
         title: "Useful Links",

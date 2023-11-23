@@ -11,6 +11,7 @@ export default {
                 dimPurple: "#20112D",
                 bgInput: "#7B678A",
                 textInput: "#BEAFC3",
+                textColor: "rgb(255, 255, 255, 0.8)",
             },
             fontFamily: {
                 satoshi: ["Satoshi", "sans-serif"],
