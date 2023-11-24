@@ -6,32 +6,26 @@ const Headset = () => {
         <section
             id="hero"
             className={`${styles.paddingY} flex justify-between
-     items-center `}
+     items-stretch gap-20  `}
         >
-            <div className="flex justify-between items-center gap-20 ">
-                <img
-                    src={vr}
-                    alt="vr headset"
-                    className="object-cover w-auto h-auto"
-                />
-                <div className="flex flex-col gap-10">
-                    <h2 className={`${styles.heading2} `}>
-                        Our Virtual Headsets{" "}
-                        <span className="block">Shine with Unique</span>
-                        Features!
-                    </h2>
-                    <ul className="grid grid-cols-2 gap-6">
-                        {features.map((item) => (
-                            <li
-                                key={item.id}
-                                className="flex items-start gap-4 text-[16px]"
-                            >
-                                <img src={star} alt="star" />
-                                <p>{item.desc}</p>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+            <img src={vr} alt="vr headset" className="object-cover flex-1" />
+            <div className="flex felx-1 flex-col">
+                <h2 className={`${styles.heading2} mt-10`}>
+                    Our Virtual Headsets{" "}
+                    <span className="block">Shine with Unique</span>
+                    Features!
+                </h2>
+                <ul className="grid grid-cols-2 gap-6 mt-auto">
+                    {features.map((item) => (
+                        <li
+                            key={item.id}
+                            className="flex items-start gap-4 text-[16px]"
+                        >
+                            <img src={star} alt="star" />
+                            <p>{item.desc}</p>
+                        </li>
+                    ))}
+                </ul>
             </div>
         </section>
     );

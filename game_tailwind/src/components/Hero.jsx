@@ -16,9 +16,9 @@ const Hero = () => {
         <section
             id="hero"
             className={`${styles.paddingY} flex justify-between
-             items-center`}
+             items-stretch`}
         >
-            <div className="flex flex-col gap-10 ">
+            <div className="flex flex-col gap-10 flex-1 ">
                 <p className="font-medium text-[16px] uppercase tracking-widest">
                     virtual headsets
                 </p>
@@ -75,11 +75,11 @@ const Hero = () => {
                     <img
                         src={hero}
                         alt="VR headset"
-                        className="h-[600px] w-auto"
+                        className="h-5/6 w-auto mt-16"
                     />
                     <hr className=" gradient-border"></hr>
                 </div>
-                <div className="flex justify-around items-center gap-10 mt-5">
+                <div className="flex justify-around items-center gap-10 mt-auto">
                     <div className="flex gap-3">
                         <img src={education} alt="education" />
                         <p>Enhanced Education</p>

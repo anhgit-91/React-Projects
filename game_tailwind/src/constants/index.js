@@ -1,4 +1,18 @@
-import { facebook, instagram, twitter, discord } from "../assets/index";
+import {
+    facebook,
+    instagram,
+    twitter,
+    discord,
+    creator_1,
+    creator_2,
+    creator_3,
+    creator_4,
+    creator_5,
+    topgame_1,
+    topgame_2,
+    topgame_3,
+    topgame_4,
+} from "../assets/index";
 
 export const navLinks = [
     {
@@ -46,67 +60,99 @@ export const features = [
     },
 ];
 
+export const creators = [
+    {
+        id: "creator-1",
+        image: creator_1,
+    },
+    {
+        id: "creator-2",
+        image: creator_2,
+    },
+    {
+        id: "creator-3",
+        image: creator_3,
+    },
+    {
+        id: "creator-4",
+        image: creator_4,
+    },
+    {
+        id: "creator-5",
+        image: creator_5,
+    },
+];
+
+export const topGames = [
+    {
+        title: "Horizon: Call of the mountain",
+        img: topgame_1,
+    },
+    {
+        title: "Half - Life : ALYX",
+        img: topgame_2,
+    },
+    {
+        title: "Fight Night Champion",
+        img: topgame_3,
+    },
+    {
+        title: "Call of Duty : Coold War",
+        img: topgame_4,
+    },
+];
+
+export const faq = [
+    {
+        title: "What are the different types of virtual headsets available?",
+        info: "Virtual headsets are equipped with various sensors to track the user's movements. These sensors can include accelerometers, gyroscopes, and sometimes external cameras or base stations. They constantly monitor the position and orientation of the headset and sometimes the user's hand controllers.",
+    },
+    {
+        title: "How does a virtual headset work?",
+        info: "The headset has one or two high-resolution displays, one for each eye, positioned in front of the user's eyes. These displays show stereoscopic 3D images, creating a sense of depth and immersion. Between the displays and the user's eyes, help focus the images and adjust them for the user's field of view.",
+    },
+    {
+        title: "Do I need a powerful computer to use a virtual headset?",
+        info: "Virtual headsets are equipped with various sensors to track the user's movements. These sensors can include accelerometers, gyroscopes, and sometimes external cameras or base stations. They constantly monitor the position and orientation of the headset and sometimes the user's hand controllers.",
+    },
+    {
+        title: "What are the main applications of virtual headsets?",
+        info: "The headset has one or two high-resolution displays, one for each eye, positioned in front of the user's eyes. These displays show stereoscopic 3D images, creating a sense of depth and immersion. Between the displays and the user's eyes, help focus the images and adjust them for the user's field of view.",
+    },
+];
+
 export const footerLinks = [
     {
-        title: "Useful Links",
+        title: "Menu",
         links: [
             {
-                name: "Content",
-                link: "https://www.hoobank.com/content/",
+                name: "Home",
             },
             {
-                name: "How it Works",
-                link: "https://www.hoobank.com/how-it-works/",
+                name: "Catalog",
             },
             {
-                name: "Create",
-                link: "https://www.hoobank.com/create/",
+                name: "Features",
             },
             {
-                name: "Explore",
-                link: "https://www.hoobank.com/explore/",
-            },
-            {
-                name: "Terms & Services",
-                link: "https://www.hoobank.com/terms-and-services/",
+                name: "Contact",
             },
         ],
     },
     {
-        title: "Community",
+        title: "Company",
         links: [
             {
-                name: "Help Center",
-                link: "https://www.hoobank.com/help-center/",
+                name: "Login",
             },
             {
-                name: "Partners",
-                link: "https://www.hoobank.com/partners/",
+                name: "Sign Up",
             },
             {
-                name: "Suggestions",
-                link: "https://www.hoobank.com/suggestions/",
+                name: "Privacy",
             },
             {
-                name: "Blog",
-                link: "https://www.hoobank.com/blog/",
-            },
-            {
-                name: "Newsletters",
-                link: "https://www.hoobank.com/newsletters/",
-            },
-        ],
-    },
-    {
-        title: "Partner",
-        links: [
-            {
-                name: "Our Partner",
-                link: "https://www.hoobank.com/our-partner/",
-            },
-            {
-                name: "Become a Partner",
-                link: "https://www.hoobank.com/become-a-partner/",
+                name: "Products",
             },
         ],
     },

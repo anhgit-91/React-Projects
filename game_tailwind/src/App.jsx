@@ -33,8 +33,10 @@ const App = () => {
                     <Creator />
                     <Games />
                     <Faq />
-                    <Footer />
                 </div>
+            </div>
+            <div className="bg-dimPurple/90 w-full">
+                <Footer />
             </div>
         </div>
     );
