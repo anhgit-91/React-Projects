@@ -5,6 +5,7 @@ import Counter from './Counter';
 import ToggleVisibility from './Toggle';
 import InputTracker from './InputTracker';
 import FullName from './MultipleVariables';
+import LoginForm from './FormValidation';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,6 +14,7 @@ root.render(
     <ToggleVisibility/>
     <InputTracker/>
     <FullName/>
+    <LoginForm/>
   </React.StrictMode>
 );
 
