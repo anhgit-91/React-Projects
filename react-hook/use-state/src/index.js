@@ -6,6 +6,8 @@ import ToggleVisibility from './Toggle';
 import InputTracker from './InputTracker';
 import FullName from './MultipleVariables';
 import LoginForm from './FormValidation';
+import DelayedCounter from './DelayedCounter';
+import ColorPicker from './ColorPicker';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,6 +17,8 @@ root.render(
     <InputTracker/>
     <FullName/>
     <LoginForm/>
+    <DelayedCounter/>
+    <ColorPicker/>
   </React.StrictMode>
 );
 
