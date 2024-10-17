@@ -1,52 +1,58 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const TodoList = () => {
-    // Logic start here
+    // logic start here
     const [todos, setTodos] = useState([]);
-    const [newTodo, setNewTodo] = useState("");
-    const [Index, setIndex] = useState(null);
+    const [newTodo, setNewToDo] = useState('');
+    const [editIndex, setEditIndex] = useState(null);
 
-    const addTodo = () => {
-        setTodos([
-            ...todos,
-            { id: Date.now(), title: newTodo, completed: false },
-        ]);
-        setNewTodo('');
+    const handleAdd = () => {
+        setTodos([...todos,{id: Date.now(), title: newTodo, complete: false}])
+        setNewToDo('');
     };
 
-    const editTodo = (index) => {
-        setIndex(index);
-        setNewTodo(todos[index].title);
+    const handleEdit = (index) => {
+        setEditIndex(index);
+        setNewToDo(todos[index].title);
     };
 
-    const deleteTodo = (index) => {
-        setTodos(todos.filter((_, idx) => idx !== index));
-    };
+    const handleDelete = (index) => {
+        setTodos(todos.filter((_,idx) => idx !== index));
+    }
 
-    const updateTodo = () => {
-        const updatedTodos = todos.map((todo, idx) => 
-        idx === Index ? {...todo, title: newTodo} : todo);
-        setTodos(updatedTodos);
-        setIndex(null);
-        setNewTodo('');
-    };
+    const handleUpdate = () => {
+        const updateTodos = todos.map((todo, idx) => idx=== editIndex ? {...todo, title: newTodo} : todo);
+        setTodos(updateTodos);
+        setEditIndex(null);
+        setNewToDo('');
+    }
+
     return (
-        <div>
-            <h1>Todo List</h1>
-            <input placeholder="New todo" value={newTodo} onChange={e => setNewTodo(e.target.value)} />
-            <button onClick={Index === null ? addTodo : updateTodo}>
-                {Index === null ? 'Add' : 'Update'}
+        <div style={{margin: '20px'}}>
+            <label htmlFor="todo">Add your new todo</label>
+            <input 
+            type="text" 
+            name='todo' 
+            id='todo' 
+            placeholder='New todo' 
+            value={newTodo}
+            onChange={e => setNewToDo(e.target.value)}
+            />
+            <button onClick={editIndex === null ? handleAdd : handleUpdate}>
+                {editIndex === null ? 'Add' : 'Update'}
             </button>
 
             <ul>
                 {todos.map((todo, index) => (
-                    <li key={todo.id}>
-                        {todo.title}
-                        <button onClick={() => editTodo(index)}>Edit</button>
-                        <button onClick={() => deleteTodo(index)}>Delete</button>
-                    </li>
+                <li key={todo.id}>
+                    {todo.title}
+                    <button onClick={() => handleEdit(index)}>Edit</button>
+                    <button onClick={() => handleDelete(index)}>Delete</button>
+                </li>
                 ))}
+                
             </ul>
+        
         </div>
     );
 };

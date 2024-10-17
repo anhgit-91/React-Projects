@@ -10,7 +10,8 @@ import './index.css';
 // import ColorPicker from './basic/ColorPicker';
 // import ClassToggler from './basic/DynamicToggles';
 // ******* Advanced *******
-import TodoList from './advanced/TodoList';
+//import TodoList from './advanced/TodoList';
+import Form from './advanced/Form';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -23,7 +24,8 @@ root.render(
     <ColorPicker/>
     <ClassToggler/> */}
 
-    <TodoList />
+    {/*<TodoList />*/}
+    <Form/>
   </React.StrictMode>
 );
 
