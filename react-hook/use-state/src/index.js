@@ -11,7 +11,8 @@ import './index.css';
 // import ClassToggler from './basic/DynamicToggles';
 // ******* Advanced *******
 //import TodoList from './advanced/TodoList';
-import Form from './advanced/Form';
+//import Form from './advanced/Form';
+import ArrayManipulator from './advanced/ArrayManipulator';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -24,8 +25,9 @@ root.render(
     <ColorPicker/>
     <ClassToggler/> */}
 
-    {/*<TodoList />*/}
-    <Form/>
+    {/*<TodoList />
+    <Form/>*/}
+    <ArrayManipulator />
   </React.StrictMode>
 );
 
