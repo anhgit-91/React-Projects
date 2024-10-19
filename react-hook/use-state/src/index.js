@@ -12,7 +12,8 @@ import './index.css';
 // ******* Advanced *******
 //import TodoList from './advanced/TodoList';
 //import Form from './advanced/Form';
-import ArrayManipulator from './advanced/ArrayManipulator';
+//import ArrayManipulator from './advanced/ArrayManipulator';
+import MultiCounter from './advanced/MultipleCounters';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -26,8 +27,9 @@ root.render(
     <ClassToggler/> */}
 
     {/*<TodoList />
-    <Form/>*/}
-    <ArrayManipulator />
+    <Form/>
+    <ArrayManipulator />*/}
+    <MultiCounter />
   </React.StrictMode>
 );
 
