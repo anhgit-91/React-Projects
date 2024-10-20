@@ -13,7 +13,8 @@ import './index.css';
 //import TodoList from './advanced/TodoList';
 //import Form from './advanced/Form';
 //import ArrayManipulator from './advanced/ArrayManipulator';
-import MultiCounter from './advanced/MultipleCounters';
+//import MultiCounter from './advanced/MultipleCounters';
+import SearchFilter from './advanced/SearchFilter';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -28,8 +29,9 @@ root.render(
 
     {/*<TodoList />
     <Form/>
-    <ArrayManipulator />*/}
-    <MultiCounter />
+    <ArrayManipulator />
+    <MultiCounter /> */}
+    <SearchFilter />
   </React.StrictMode>
 );
 
