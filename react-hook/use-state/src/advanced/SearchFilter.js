@@ -6,7 +6,7 @@ const SearchFilter = () => {
     const [searchItem, setSearchItem] = useState("");
 
     const filterUsers = users.filter((user) =>
-        user.toLocaleLowerCase().includes(searchItem.toLowerCase())
+        user.toLowerCase().includes(searchItem.toLowerCase())
     );
     return (
         <div>
