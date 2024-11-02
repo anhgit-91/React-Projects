@@ -7,6 +7,7 @@ import DataFetch from './basic/DataFetch';
 import UpdateState from './basic/UpdateState';
 import LocalStorage from './basic/LocalStorage';
 import Timer from './basic/Timer';
+import SearchAPI from './advanced/SearchAPI';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,7 +16,8 @@ root.render(
     {/* <DataFetch /> */}
     {/* <UpdateState count={5}/> */}
     {/* <LocalStorage /> */}
-    <Timer />
+    {/* <Timer /> */}
+    <SearchAPI />
   </React.StrictMode>
 );
 
