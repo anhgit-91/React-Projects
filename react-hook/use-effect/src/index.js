@@ -8,6 +8,9 @@ import UpdateState from './basic/UpdateState';
 import LocalStorage from './basic/LocalStorage';
 import Timer from './basic/Timer';
 import SearchAPI from './advanced/SearchAPI';
+import Array from './advanced/Array';
+import ResizeListener from './advanced/ResizeListener';
+import Toggle from './advanced/ToggleState';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,7 +20,11 @@ root.render(
     {/* <UpdateState count={5}/> */}
     {/* <LocalStorage /> */}
     {/* <Timer /> */}
-    <SearchAPI />
+    {/* <SearchAPI /> */}
+    {/* <Array />
+     */}
+    {/* <ResizeListener /> */}
+    <Toggle />
   </React.StrictMode>
 );
 
