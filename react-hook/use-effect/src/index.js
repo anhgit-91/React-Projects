@@ -11,6 +11,7 @@ import SearchAPI from './advanced/SearchAPI';
 import Array from './advanced/Array';
 import ResizeListener from './advanced/ResizeListener';
 import Toggle from './advanced/ToggleState';
+import SynchronizedComponent from './advanced/SynczTabs';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -21,10 +22,10 @@ root.render(
     {/* <LocalStorage /> */}
     {/* <Timer /> */}
     {/* <SearchAPI /> */}
-    {/* <Array />
-     */}
+    {/* <Array /> */}
     {/* <ResizeListener /> */}
-    <Toggle />
+    {/* <Toggle /> */}
+    <SynchronizedComponent />
   </React.StrictMode>
 );
 
