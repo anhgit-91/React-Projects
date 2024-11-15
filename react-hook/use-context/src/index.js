@@ -7,6 +7,7 @@ import AuthenticationContext from './basic/UserAuthentication';
 import ModalContext from './Intermediate/ModalContext';
 import ShoppingCart from './Intermediate/ShoppingCart';
 import Notification from './Intermediate/NotificationSystem';
+import UserPreferences from './Intermediate/UserPreferences';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -15,7 +16,8 @@ root.render(
     {/* <AuthenticationContext /> */}
     {/* <ModalContext /> */}
     {/* <ShoppingCart /> */}
-    <Notification />
+    {/* <Notification /> */}
+    <UserPreferences />
   </React.StrictMode>
 );
 
