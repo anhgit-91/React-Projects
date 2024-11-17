@@ -6,6 +6,7 @@ const PreferencesContext = createContext();
 // UserPreferences component that wraps the context provider
 const UserPreferences = () => {
     const [users, setUsers] = useState([]);
+    const [selectedUser, setSelectedUser] = useState('')
 
     // Method to update user preferences
     const updateUserPreference = (userName, key, value) => {
@@ -15,7 +16,7 @@ const UserPreferences = () => {
     };
 
     return (
-        <PreferencesContext.Provider value={{ users, setUsers, updateUserPreference }}>
+        <PreferencesContext.Provider value={{ users, setUsers, updateUserPreference, selectedUser, setSelectedUser }}>
             <AddUsers />
             <UserList />
         </PreferencesContext.Provider>
@@ -24,7 +25,7 @@ const UserPreferences = () => {
 
 // AddUsers component to add new users
 const AddUsers = () => {
-    const { users, setUsers } = useContext(PreferencesContext);
+    const { users, setUsers, setSelectedUser } = useContext(PreferencesContext);
     const [newUser, setNewUser] = useState('');
 
     const handleAdd = () => {
@@ -36,7 +37,14 @@ const AddUsers = () => {
             alert("User already exists");
             return;
         }
-        setUsers([...users, { id: Date.now(), name: newUser.trim(), theme: 'white', language: 'english', fontSize: '16px' }]);
+        const newUserObject = { id: Date.now(), name: newUser.trim(), theme: 'red', language: 'english', fontSize: '16px' };
+        const updatedUsers = [...users, newUserObject];
+        
+        setUsers(updatedUsers);
+        if (updatedUsers.length === 1) {
+            setSelectedUser(newUserObject.name);
+        }
+        
         setNewUser('');
     };
 
@@ -58,13 +66,13 @@ const AddUsers = () => {
 
 // UserList component to display the list of users
 const UserList = () => {
-    const { users } = useContext(PreferencesContext);
-    const [selectedUser, setSelectedUser] = useState('');
+    const { users, selectedUser, setSelectedUser } = useContext(PreferencesContext);
 
     return (
         <div>
-            <label htmlFor="selectUser">Select a User:</label>
-            <select name="users" id="selectUser" onChange={e => setSelectedUser(e.target.value)}>
+            
+            <label htmlFor="selectedUser">Select a User:</label>
+            <select name="users" id="selectedUser" value={selectedUser} onChange={e => setSelectedUser(e.target.value)}>
                 {users && users.length > 0 ? (
                     users.map((user) => (
                         <option key={user.id} value={user.name}>{user.name}</option>
@@ -89,6 +97,11 @@ const Setting = ({ user }) => {
         return <div>Please select a user to view settings.</div>;
     }
 
+    const mystyle = {
+        color: selectedUser.theme,
+        fontSize: selectedUser.fontSize,
+      };
+
     return (
         <div>
             <h3>Settings for {selectedUser.name}</h3>
@@ -98,8 +111,8 @@ const Setting = ({ user }) => {
                 value={selectedUser.theme}
                 onChange={e => updateUserPreference(selectedUser.name, 'theme', e.target.value)}
             >
-                <option value="white">White</option>
-                <option value="dark">Dark</option>
+                <option value="red">Red</option>
+                <option value="green">Green</option>
                 <option value="blue">Blue</option>
             </select>
 
@@ -119,6 +132,9 @@ const Setting = ({ user }) => {
                 value={parseInt(selectedUser.fontSize)}
                 onChange={e => updateUserPreference(selectedUser.name, 'fontSize', `${e.target.value}px`)}
             />
+            <br />
+            <h3>Sample text:</h3>
+            <p style={mystyle}>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
     );
 };
